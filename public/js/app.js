@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (e) => {
       } else {
         console.log(data)
         messageOne.textContent = data.location.name + ', ' + data.location.timezone_id + ', ' + data.location.country
-        messageTwo.textContent = data.forecast
+        messageTwo.textContent = data.forecast.temperature.toString() + ' Celsius, ' + data.forecast.humidity + '% of humidity!'
       }
     })
   })
